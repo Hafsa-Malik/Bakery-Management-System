@@ -30,7 +30,7 @@ UPDATE inventoryproducts
 SET quantity = quantity-100 
 WHERE inventoryID = getInventoryID(adminName,adminPass) 
 AND productID = prodID 
-AND quantity > 0;
+AND quantity > 0; 
 
 Update stockproducts SET quantity = quantity + 100 WHERE productID = prodID AND branchID = (SELECT branchID from requests WHERE productID = prodID); 
 
